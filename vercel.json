@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "mernBackend/index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "mernFrontend/package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "mernFrontend/dist" }
+      }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "mernBackend/index.js" },
+      { "src": "/(.*)", "dest": "mernFrontend/dist/$1" }
+    ]
+  }
+  

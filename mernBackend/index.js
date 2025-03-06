@@ -50,7 +50,12 @@ app.get("/set-cookie", (req, res) => {
 app.get("/get-session", (req, res) => {
   res.json(req.session.user || "No active session");
 });
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "mernFrontend/dist")));
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "mernFrontend/dist", "index.html"));
+});
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
