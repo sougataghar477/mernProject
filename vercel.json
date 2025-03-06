@@ -1,14 +1,4 @@
 {
-    "version": 2,
-    "projects": [
-      {
-        "name": "mern-frontend",
-        "rootDirectory": "mernFrontend"
-      },
-      {
-        "name": "mern-backend",
-        "rootDirectory": "mernBackend"
-      }
-    ]
+    "version": 2
   }
   
