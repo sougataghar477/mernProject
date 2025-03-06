@@ -1,0 +1,6 @@
+{
+    "name": "mern-monorepo",
+    "private": true,
+    "workspaces": ["mernFrontend", "mernBackend"]
+  }
+  
