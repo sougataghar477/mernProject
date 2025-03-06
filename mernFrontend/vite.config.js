@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://mern-project-ten-pearl.vercel.app", // Backend server URL
+        target: "http://localhost:5000", // Backend server URL
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ""), // Removes "/api" before sending to backend
